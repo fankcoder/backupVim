@@ -18,7 +18,6 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
    
-   
 let g:pydiction_location='~/.vim/tools/pydiction/complete-dict'  
 set autoindent
 set tabstop=4  
@@ -43,7 +42,6 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
    
-
 map <F5> :!python %<CR>
 ab xdate <c-r>=strftime("20%y%m%d %H:%M:%S")<C-I>
 set lines=29 columns=175
@@ -84,7 +82,6 @@ call vundle#rc()
  Bundle 'vim-python-pep8-indent'
  Bundle 'mattn/emmet-vim'
  Bundle 'vim-color-solarized'
-
 
 filetype plugin indent on     " required!
  "
