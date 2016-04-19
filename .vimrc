@@ -18,6 +18,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
    
+   
 let g:pydiction_location='~/.vim/tools/pydiction/complete-dict'  
 set autoindent
 set tabstop=4  
@@ -33,6 +34,7 @@ let Tlist_Auto_Open=0
 set nofoldenable
 map <F7> :NERDTreeToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
+nmap <C-t> :tabnew<CR> :NERDTreeToggle<CR>
 filetype plugin on  
 autocmd FileType python set omnifunc=pythoncomplete#Complete  
 autocmd FileType javascrīpt set omnifunc=javascriptcomplete#CompleteJS  
@@ -42,6 +44,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
    
+
 map <F5> :!python %<CR>
 ab xdate <c-r>=strftime("20%y%m%d %H:%M:%S")<C-I>
 set lines=29 columns=175
@@ -67,6 +70,9 @@ call vundle#rc()
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
+ Bundle 'Valloric/YouCompleteMe'
+"if ycm_add_preview_to_completeopt = 0 can't work then set cot
+set completeopt = "menuone"
  " vim-scripts repos
  "Bundle 'L9'
  Bundle 'FuzzyFinder'
@@ -79,9 +85,10 @@ call vundle#rc()
  "myExtends
  Bundle 'vim-airline'
  Bundle 'vim-startify'
- Bundle 'vim-python-pep8-indent'
+ Bundle 'hynek/vim-python-pep8-indent'
  Bundle 'mattn/emmet-vim'
- Bundle 'vim-color-solarized'
+ Bundle 'altercation/vim-colors-solarized'
+
 
 filetype plugin indent on     " required!
  "
