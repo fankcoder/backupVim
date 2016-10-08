@@ -6,8 +6,7 @@ git clone https://github.com/fankcoder/backupVim.git
 
 ##将.vimrc & .vim 拷到主目录
 ```
-mv ./backupVim/.vimrc ~/
-mv ./backupVim/.vim ~/
+mv ./backupVim/.vimrc ~/ && mv ./backupVim/.vim ~/
 ```
 
 ##安装Vundle
