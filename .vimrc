@@ -17,7 +17,8 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags  
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
-   
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'   
    
 let g:pydiction_location='~/.vim/tools/pydiction/complete-dict'  
 set autoindent
@@ -49,8 +50,17 @@ map <F5> :!python %<CR>
 ab xdate <c-r>=strftime("20%y%m%d %H:%M:%S")<C-I>
 set lines=29 columns=175
 syntax enable
-set background=dark
-colorscheme solarized
+syntax on
+set nu
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+else
+    set t_Co=256
+    set background=light
+    colorscheme solarized
+    let g:solarized_termcolors=256
+endif
 set foldmethod=indent
 
 set nocompatible               " be iMproved
@@ -88,6 +98,7 @@ set completeopt = "menuone"
  Bundle 'hynek/vim-python-pep8-indent'
  Bundle 'mattn/emmet-vim'
  Bundle 'altercation/vim-colors-solarized'
+ Bundle 'godlygeek/csapprox'
 
 
 filetype plugin indent on     " required!
