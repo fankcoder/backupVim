@@ -19,3 +19,16 @@ vim中执行
 ```
 run :BundleInstall
 ```
+
+##fix tags
+```
+sudo apt install tags
+```
+
+##install YCM with C-family languages
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+```
+
+##have fun:）
