@@ -20,9 +20,9 @@ vim中执行
 run :BundleInstall
 ```
 
-## fix tags
+## which tags
 ```
-sudo apt install tags
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 ```
 
 ## install YCM with C-family languages
