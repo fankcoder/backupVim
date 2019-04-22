@@ -1,0 +1,9 @@
+ set autoindent
+ set tabstop=4
+ set shiftwidth=4
+ set expandtab
+ set number
+ ab xdate <c-r>=strftime("20%y%m%d %H:%M:%S")<C-I>
+ set nu
+ colorscheme slate
+ syntax on
